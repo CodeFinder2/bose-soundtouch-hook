@@ -1,0 +1,471 @@
+root@rhino:~# dmesg
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 3.14.43+ (epdbuild@hepdswbld04.bose.com) (gcc version 4.7.3 20130226 (prerelease) (crosstool-NG linaro-1.13.1-4.7-2013.03-20130313 - Linaro GCC 2013.03) ) #137 Wed Oct 25 21:06:53 EDT 2017
+[    0.000000] CPU: ARMv7 Processor [413fc082] revision 2 (ARMv7), cr=10c53c7d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] Machine model: Shelby 2
+[    0.000000] cma: CMA: reserved 24 MiB at 86000000
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] On node 0 totalpages: 32512
+[    0.000000] free_area_init_node: node 0, pgdat c061a50c, node_mem_map c7d39000
+[    0.000000]   Normal zone: 256 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 32512 pages, LIFO batch:7
+[    0.000000] CPU: All CPU(s) started in SVC mode.
+[    0.000000] AM335X ES2.1 (neon )
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 32256
+[    0.000000] Kernel command line: console=ttyO3,115200n8 quiet root=ubi0:rootfs ro ubi.mtd=8,2048 noinitrd rootfstype=ubifs rootwait=1 ip= variant=rhino variant_raw=3599 variant_mode=normal oled_type= country=GB region=GB
+[    0.000000] PID hash table entries: 512 (order: -1, 2048 bytes)
+[    0.000000] Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Memory: 97700K/130048K available (4319K kernel code, 252K rwdata, 1436K rodata, 210K init, 196K bss, 32348K reserved, 0K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+[    0.000000]     vmalloc : 0xc8800000 - 0xff000000   ( 872 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xc8000000   ( 128 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0xc0008000 - 0xc05a6ffc   (5756 kB)
+[    0.000000]       .init : 0xc05a7000 - 0xc05db86c   ( 211 kB)
+[    0.000000]       .data : 0xc05dc000 - 0xc061b1e0   ( 253 kB)
+[    0.000000]        .bss : 0xc061b1e0 - 0xc064c590   ( 197 kB)
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] IRQ: Found an INTC at 0xfa200000 (revision 5.0) with 128 interrupts
+[    0.000000] Total of 128 interrupts on 1 active controller
+[    0.000000] OMAP clockevent source: timer2 at 24000000 Hz
+[    0.000018] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 178956969942ns
+[    0.000043] OMAP clocksource: timer1 at 24000000 Hz
+[    0.000311] Console: colour dummy device 80x30
+[    0.000351] Calibrating delay loop... 597.60 BogoMIPS (lpj=2988032)
+[    0.059194] pid_max: default: 32768 minimum: 301
+[    0.059323] Security Framework initialized
+[    0.059389] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.059405] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.069413] CPU: Testing write buffer coherency: ok
+[    0.069867] Setting up static identity map for 0x8043d908 - 0x8043d960
+[    0.071023] devtmpfs: initialized
+[    0.073664] VFP support v0.3: implementor 41 architecture 3 part 30 variant c rev 3
+[    0.082925] omap_hwmod: tptc0 using broken dt data from edma
+[    0.083033] omap_hwmod: tptc1 using broken dt data from edma
+[    0.083129] omap_hwmod: tptc2 using broken dt data from edma
+[    0.142017] pinctrl core: initialized pinctrl subsystem
+[    0.143180] regulator-dummy: no parameters
+[    0.145992] NET: Registered protocol family 16
+[    0.148658] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.150986] cpuidle: using governor ladder
+[    0.151005] cpuidle: using governor menu
+[    0.160560] platform 49000000.edma: alias fck already exists
+[    0.160596] platform 49000000.edma: alias fck already exists
+[    0.160615] platform 49000000.edma: alias fck already exists
+[    0.161994] OMAP GPIO hardware version 0.1
+[    0.173911] omap-gpmc 50000000.gpmc: could not find pctldev for node /pinmux@44e10800/nandflash_pins_default, deferring probe
+[    0.173951] platform 50000000.gpmc: Driver omap-gpmc requests probe deferral
+[    0.203007] bio: create slab <bio-0> at 0
+[    0.220639] edma-dma-engine edma-dma-engine.0: TI EDMA DMA engine driver
+[    0.221998] wlan-en-regulator: 1800 mV 
+[    0.224079] SCSI subsystem initialized
+[    0.225193] usbcore: registered new interface driver usbfs
+[    0.225423] usbcore: registered new interface driver hub
+[    0.225699] usbcore: registered new device driver usb
+[    0.226783] omap_i2c 4802a000.i2c: could not find pctldev for node /pinmux@44e10800/i2c1_pins_default, deferring probe
+[    0.226818] platform 4802a000.i2c: Driver omap_i2c requests probe deferral
+[    0.229342] omap-mailbox 480c8000.mailbox: omap mailbox rev 0x400
+[    0.231916] Switched to clocksource timer1
+[    0.254847] NET: Registered protocol family 2
+[    0.255922] TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.255954] TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.255979] TCP: Hash tables configured (established 1024 bind 1024)
+[    0.256080] TCP: reno registered
+[    0.256097] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.256124] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.256353] NET: Registered protocol family 1
+[    0.256723] RPC: Registered named UNIX socket transport module.
+[    0.256738] RPC: Registered udp transport module.
+[    0.256746] RPC: Registered tcp transport module.
+[    0.256754] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.257380] NetWinder Floating Point Emulator V0.97 (double precision)
+[    0.257958] omap_timer 4804a000.timer: could not find pctldev for node /pinmux@44e10800/timer7_pins_default, deferring probe
+[    0.257990] platform 4804a000.timer: Driver omap_timer requests probe deferral
+[    0.260391] futex hash table entries: 256 (order: -1, 3072 bytes)
+[    0.261262] VFS: Disk quotas dquot_6.5.2
+[    0.261338] Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    0.261886] NFS: Registering the id_resolver key type
+[    0.262067] Key type id_resolver registered
+[    0.262079] Key type id_legacy registered
+[    0.262153] msgmni has been set to 238
+[    0.264238] io scheduler noop registered
+[    0.264255] io scheduler deadline registered
+[    0.264284] io scheduler cfq registered (default)
+[    0.265575] pinctrl-single: ioremap base is f9e10800 phys 44e10800
+[    0.265980] pinctrl-single 44e10800.pinmux: 142 pins at pa f9e10800 size 568
+[    0.273447] omap_uart 48024000.serial: no wakeirq for uart0
+[    0.273640] 48024000.serial: ttyO2 at MMIO 0x48024000 (irq = 90, base_baud = 3000000) is a OMAP UART2
+[    0.274483] omap_uart 481a6000.serial: no wakeirq for uart0
+[    0.274630] 481a6000.serial: ttyO3 at MMIO 0x481a6000 (irq = 60, base_baud = 3000000) is a OMAP UART3
+[    0.281605] console [ttyO3] enabled
+[    0.295829] brd: module loaded
+[    0.302905] loop: module loaded
+[    0.313621] usbcore: registered new interface driver zd1201
+[    0.313647] pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+[    0.313873] usbcore: registered new interface driver pegasus
+[    0.314092] usbcore: registered new interface driver asix
+[    0.314286] usbcore: registered new interface driver ax88179_178a
+[    0.314477] usbcore: registered new interface driver cdc_ether
+[    0.314671] usbcore: registered new interface driver cdc_eem
+[    0.314854] usbcore: registered new interface driver dm9601
+[    0.315129] usbcore: registered new interface driver cdc_ncm
+[    0.315359] usbcore: registered new interface driver cdc_acm
+[    0.315371] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    0.315590] usbcore: registered new interface driver usb-storage
+[    0.317899] 47401300.usb-phy supply vcc not found, using dummy regulator
+[    0.320447] musb-hdrc: ConfigData=0xde (UTMI-8, dyn FIFOs, bulk combine, bulk split, HB-ISO Rx, HB-ISO Tx, SoftConn)
+[    0.320467] musb-hdrc: MHDRC RTL version 2.0 
+[    0.320479] musb-hdrc: setup fifo_mode 4
+[    0.320503] musb-hdrc: 28/31 max ep, 16384/16384 memory
+[    0.320636] musb-hdrc musb-hdrc.0.auto: MUSB HDRC host driver
+[    0.320682] musb-hdrc musb-hdrc.0.auto: new USB bus registered, assigned bus number 1
+[    0.320945] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    0.320963] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.320978] usb usb1: Product: MUSB HDRC host driver
+[    0.320991] usb usb1: Manufacturer: Linux 3.14.43+ musb-hcd
+[    0.321004] usb usb1: SerialNumber: musb-hdrc.0.auto
+[    0.322428] hub 1-0:1.0: USB hub found
+[    0.322496] hub 1-0:1.0: 1 port detected
+[    0.324348] mousedev: PS/2 mouse device common for all mice
+[    0.325789] omap_rtc 44e3e000.rtc: rtc core: registered 44e3e000.rtc as rtc0
+[    0.326141] i2c /dev entries driver
+[    0.327726] omap_wdt: OMAP Watchdog Timer Rev 0x01: initial timeout 60 sec
+[    0.527126] omap_hsmmc 48060000.mmc: card claims to support voltages below defined range
+[    0.528895] usbcore: registered new interface driver usbhid
+[    0.528909] usbhid: USB HID core driver
+[    0.529205] platform 44d00000.wkup_m3: Driver wkup_m3 requests probe deferral
+[    0.529717] oprofile: hardware counters not available
+[    0.529730] oprofile: using timer interrupt.
+[    0.529802] Netfilter messages via NETLINK v0.30.
+[    0.529824] nf_conntrack version 0.5.0 (1910 buckets, 7640 max)
+[    0.530046] ctnetlink v0.93: registering with nfnetlink.
+[    0.530472] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    0.530657] TCP: cubic registered
+[    0.530673] NET: Registered protocol family 17
+[    0.530835] Key type dns_resolver registered
+[    0.532627] PM: Voltage scaling data blob not provided from DT.
+[    0.532759] PM: bootloader does not support rtc-only!
+[    0.532775] ThumbEE CPU extension supported.
+[    0.534753] regulator-dummy: disabling
+[    0.535253] omap-gpmc 50000000.gpmc: GPMC revision 6.0
+[    0.535276] gpmc_mem_init: disabling cs 0 mapped at 0x0-0x1000000
+[    0.536736] nand: device found, Manufacturer ID: 0x2c, Chip ID: 0xaa
+[    0.536755] nand: Micron MT29F2G08ABBEAH4
+[    0.536768] nand: 256MiB, SLC, page size: 2048, OOB size: 64
+[    0.536780] nand: using OMAP_ECC_BCH8_CODE_HW ECC scheme
+[    0.536941] 13 ofpart partitions found on MTD device omap2-nand.0
+[    0.536953] Creating 13 MTD partitions on "omap2-nand.0":
+[    0.536974] 0x000000000000-0x000000020000 : "NAND.SPL"
+[    0.539286] 0x000000020000-0x000000040000 : "NAND.SPL.backup1"
+[    0.541255] 0x000000040000-0x000000060000 : "NAND.SPL.backup2"
+[    0.543390] 0x000000060000-0x000000080000 : "NAND.SPL.backup3"
+[    0.545459] 0x000000080000-0x000000260000 : "NAND.U-Boot"
+[    0.547667] mmc0: queuing unknown CIS tuple 0x91 (3 bytes)
+[    0.549695] 0x000000260000-0x000000280000 : "NAND.U-Boot-Env"
+[    0.551771] 0x000000280000-0x000000780000 : "NAND.Kernel-Ping"
+[    0.556769] mmc0: new high speed SDIO card at address 0001
+[    0.560200] 0x000000780000-0x000000c80000 : "NAND.Kernel-Pong"
+[    0.566208] 0x000000c80000-0x000006c80000 : "NAND.File-System-Ping"
+[    0.646985] 0x000006c80000-0x00000cc80000 : "NAND.File-System-Pong"
+[    0.727844] 0x00000cc80000-0x00000f280000 : "NAND.Persistent-Storage"
+[    0.760866] 0x00000f280000-0x00000fe00000 : "NAND.Update-Staging"
+[    0.772182] 0x00000fe00000-0x00000fe40000 : "NAND.Manufacturing-Data"
+[    0.776730] ncp6922 1-0018: NCP Product ID 0xc
+[    0.778455] dcdc1: at 1500 mV 
+[    0.780699] dcdc2: at 1100 mV 
+[    0.782511] ldo3: at 1800 mV 
+[    0.783830] ldo4: at 3300 mV 
+[    0.784428] omap_i2c 4802a000.i2c: bus 1 rev0.11 at 100 kHz
+[    0.785171]  remoteproc0: wkup_m3 is available
+[    0.785189]  remoteproc0: Note: remoteproc is still under development and considered experimental.
+[    0.785200]  remoteproc0: THE BINARY FORMAT IS NOT YET FINALIZED, and backward compatibility isn't yet guaranteed.
+[    0.785504]  remoteproc0: Direct firmware load failed with error -2
+[    0.785519]  remoteproc0: Falling back to user helper
+[    0.786673] UBI: attaching mtd8 to ubi0
+[    1.163293] UBI: scanning is finished
+[    1.169489] UBI warning: print_rsvd_warning: cannot reserve enough PEBs for bad PEB handling, reserved 7, need 40
+[    1.171052] UBI: attached mtd8 (name "NAND.File-System-Ping", size 96 MiB) to ubi0
+[    1.171071] UBI: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+[    1.171082] UBI: min./max. I/O unit sizes: 2048/2048, sub-page size 512
+[    1.171092] UBI: VID header offset: 2048 (aligned 2048), data offset: 4096
+[    1.171102] UBI: good PEBs: 768, bad PEBs: 0, corrupted PEBs: 0
+[    1.171112] UBI: user volume: 1, internal volumes: 1, max. volumes count: 128
+[    1.171126] UBI: max/mean erase counter: 2/0, WL threshold: 4096, image sequence number: 548192091
+[    1.171136] UBI: available PEBs: 0, total reserved PEBs: 768, PEBs reserved for bad PEB handling: 7
+[    1.171664] Missing mdio platform device
+[    1.175901] cpsw 4a100000.ethernet: cpsw: platform data missing
+[    1.182469] UBI: background thread "ubi_bgt0d" started, PID 701
+[    1.183078] omap_rtc 44e3e000.rtc: setting system clock to 2000-01-01 00:00:01 UTC (946684801)
+[    1.242697] UBIFS: mounted UBI device 0, volume 0, name "rootfs", R/O mode
+[    1.242729] UBIFS: LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+[    1.242745] UBIFS: FS size: 93073408 bytes (88 MiB, 733 LEBs), journal size 9023488 bytes (8 MiB, 72 LEBs)
+[    1.242754] UBIFS: reserved for root: 0 bytes (0 KiB)
+[    1.242773] UBIFS: media format: w4/r0 (latest is w4/r0), UUID 36CE558C-9E2A-4E3F-B0F8-7BD1B81579FE, small LPT model
+[    1.244345] VFS: Mounted root (ubifs filesystem) readonly on device 0:13.
+[    1.245483] devtmpfs: mounted
+[    1.245875] Freeing unused kernel memory: 208K (c05a7000 - c05db000)
+[    2.877749] UBI: attaching mtd10 to ubi1
+[    3.027712] UBI: scanning is finished
+[    3.034707] UBI: attached mtd10 (name "NAND.Persistent-Storage", size 38 MiB) to ubi1
+[    3.034731] UBI: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+[    3.034743] UBI: min./max. I/O unit sizes: 2048/2048, sub-page size 512
+[    3.034753] UBI: VID header offset: 2048 (aligned 2048), data offset: 4096
+[    3.034764] UBI: good PEBs: 304, bad PEBs: 0, corrupted PEBs: 0
+[    3.034774] UBI: user volume: 1, internal volumes: 1, max. volumes count: 128
+[    3.034787] UBI: max/mean erase counter: 7/4, WL threshold: 4096, image sequence number: 3107473075
+[    3.034798] UBI: available PEBs: 1, total reserved PEBs: 303, PEBs reserved for bad PEB handling: 2
+[    3.040745] UBI: background thread "ubi_bgt1d" started, PID 769
+[    3.060180] UBIFS: background thread "ubifs_bgt1_0" started, PID 772
+[    3.073229] UBIFS: recovery needed
+[    3.155537] UBIFS: recovery completed
+[    3.155702] UBIFS: mounted UBI device 1, volume 0, name "persistent_volume"
+[    3.155718] UBIFS: LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+[    3.155734] UBIFS: FS size: 36569088 bytes (34 MiB, 288 LEBs), journal size 1777664 bytes (1 MiB, 14 LEBs)
+[    3.155744] UBIFS: reserved for root: 1727248 bytes (1686 KiB)
+[    3.155762] UBIFS: media format: w4/r0 (latest is w4/r0), UUID C27BF70D-9246-44D2-B702-2025B3AA4F49, small LPT model
+[    3.226201] UBI: attaching mtd11 to ubi2
+[    3.271531] UBI: scanning is finished
+[    3.278515] UBI: attached mtd11 (name "NAND.Update-Staging", size 11 MiB) to ubi2
+[    3.278538] UBI: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+[    3.278549] UBI: min./max. I/O unit sizes: 2048/2048, sub-page size 512
+[    3.278559] UBI: VID header offset: 2048 (aligned 2048), data offset: 4096
+[    3.278569] UBI: good PEBs: 92, bad PEBs: 0, corrupted PEBs: 0
+[    3.278579] UBI: user volume: 1, internal volumes: 1, max. volumes count: 128
+[    3.278593] UBI: max/mean erase counter: 6/3, WL threshold: 4096, image sequence number: 2707370797
+[    3.278604] UBI: available PEBs: 0, total reserved PEBs: 92, PEBs reserved for bad PEB handling: 2
+[    3.283987] UBI: background thread "ubi_bgt2d" started, PID 786
+[    3.302959] UBIFS: background thread "ubifs_bgt2_0" started, PID 789
+[    3.316257] UBIFS: recovery needed
+[    3.373636] UBIFS: recovery completed
+[    3.373807] UBIFS: mounted UBI device 2, volume 0, name "update_volume"
+[    3.373824] UBIFS: LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+[    3.373840] UBIFS: FS size: 9777152 bytes (9 MiB, 77 LEBs), journal size 1015809 bytes (0 MiB, 6 LEBs)
+[    3.373850] UBIFS: reserved for root: 461798 bytes (450 KiB)
+[    3.373869] UBIFS: media format: w4/r0 (latest is w4/r0), UUID 7F13F563-FC87-4DA9-A3BD-B6F31228D67F, small LPT model
+[    3.588116] random: dd urandom read with 7 bits of entropy available
+>[    3.739571] udevd[820]: starting version 182
+[    4.157170] Loading modules backported from Linux version R8.6-0-g3f5b34f
+[    4.157196] Backport generated by backports.git R8.6-0-g4677dc3
+[    4.260644] pruss-rproc 4a300000.pruss: 8 PRU interrupts parsed
+[    4.260738] pruss-rproc 4a300000.pruss: memory    dram0: pa 0x4a300000 size 0x2000 va c8bc0000
+[    4.260766] pruss-rproc 4a300000.pruss: memory    dram1: pa 0x4a302000 size 0x2000 va c8bc4000
+[    4.260790] pruss-rproc 4a300000.pruss: memory shrdram2: pa 0x4a310000 size 0x3000 va c8bc8000
+[    4.260813] pruss-rproc 4a300000.pruss: memory     intc: pa 0x4a320000 size 0x2000 va c8bcc000
+[    4.260836] pruss-rproc 4a300000.pruss: memory      cfg: pa 0x4a326000 size 0x2000 va c8bd0000
+[    4.261043] pruss-rproc 4a300000.pruss: creating platform devices for PRU cores
+[    4.262437] pru-rproc 4a334000.pru0: memory     iram: pa 0x4a334000 size 0x2000 va c8bd4000
+[    4.262482] pru-rproc 4a334000.pru0: memory  control: pa 0x4a322000 size 0x400 va c8bbe000
+[    4.262507] pru-rproc 4a334000.pru0: memory    debug: pa 0x4a322400 size 0x100 va c8bd8400
+[    4.262711]  remoteproc1: 4a334000.pru0 is available
+[    4.262725]  remoteproc1: Note: remoteproc is still under development and considered experimental.
+[    4.262736]  remoteproc1: THE BINARY FORMAT IS NOT YET FINALIZED, and backward compatibility isn't yet guaranteed.
+[    4.272179] pru-rproc 4a334000.pru0: booting the PRU core manually
+[    4.272217]  remoteproc1: powering up 4a334000.pru0
+[    4.272520]  remoteproc1: Booting fw image rproc-pru0-fw, size 27068
+[    4.272613]  remoteproc1: starting PRU0: entry-point = 0x0
+[    4.272626]  remoteproc1: remote processor 4a334000.pru0 is now up
+[    4.272663] pru-rproc 4a334000.pru0: PRU rproc node /ocp/pruss@4a300000/pru@4a334000 probed successfully
+[    4.272884] pru-rproc 4a338000.pru1: memory     iram: pa 0x4a338000 size 0x2000 va c8bec000
+[    4.272933] pru-rproc 4a338000.pru1: memory  control: pa 0x4a324000 size 0x400 va c8bea000
+[    4.272957] pru-rproc 4a338000.pru1: memory    debug: pa 0x4a324400 size 0x100 va c8bf0400
+[    4.273183]  remoteproc2: 4a338000.pru1 is available
+[    4.273196]  remoteproc2: Note: remoteproc is still under development and considered experimental.
+[    4.273207]  remoteproc2: THE BINARY FORMAT IS NOT YET FINALIZED, and backward compatibility isn't yet guaranteed.
+[    4.311340]  remoteproc2: registered virtio0 (type 7)
+[    4.311474] pru-rproc 4a338000.pru1: PRU rproc node /ocp/pruss@4a300000/pru@4a338000 probed successfully
+[    4.341722]  remoteproc0: powering up wkup_m3
+[    4.342701]  remoteproc0: Booting fw image am335x-pm-firmware.elf, size 154412
+[    4.343186] PM: CM3 Firmware Version = 0x190
+[    4.343360]  remoteproc0: remote processor wkup_m3 is now up
+[    4.667029] ENTER: keypad_init initializing: 0
+[    4.667430] Pdev: c58d2800 passed to keypad_probe
+[    4.688763] sync_out_probe: s_run: 0, s_divider: 0, s_match:0
+[   10.497970]  remoteproc2: powering up 4a338000.pru1
+[   10.498724]  remoteproc2: Booting fw image rproc-pru1-fw, size 101780
+[   10.498914] pru-rproc 4a338000.pru1: version 0 event_chnl_map_size 1 event_chnl_map 0000083c
+[   10.498934] pru-rproc 4a338000.pru1: sysevt-to-ch[59] -> 1
+[   10.498948] pru-rproc 4a338000.pru1: skip intr mapping for chnl 0
+[   10.498962] pru-rproc 4a338000.pru1: chnl-to-host[1] -> 1
+[   10.498975] pru-rproc 4a338000.pru1: skip intr mapping for chnl 2
+[   10.498987] pru-rproc 4a338000.pru1: skip intr mapping for chnl 3
+[   10.498999] pru-rproc 4a338000.pru1: skip intr mapping for chnl 4
+[   10.499012] pru-rproc 4a338000.pru1: skip intr mapping for chnl 5
+[   10.499024] pru-rproc 4a338000.pru1: skip intr mapping for chnl 6
+[   10.499037] pru-rproc 4a338000.pru1: skip intr mapping for chnl 7
+[   10.499049] pru-rproc 4a338000.pru1: skip intr mapping for chnl 8
+[   10.499061] pru-rproc 4a338000.pru1: skip intr mapping for chnl 9
+[   10.499083] pruss-rproc 4a300000.pruss: SYSEV59 -> CH1 (CMR14 0x01000000)
+[   10.499099] pruss-rproc 4a300000.pruss: CH1 -> HOST1 (HMR0 0x00000100)
+[   10.499116] pruss-rproc 4a300000.pruss: configured system_events = 0x0800000000000000 intr_channels = 0x00000002 host_intr = 0x00000002
+[   10.499131]  remoteproc2: starting PRU1: entry-point = 0x0
+[   10.499143]  remoteproc2: remote processor 4a338000.pru1 is now up
+[   10.499395]  remoteproc2: kicking vqid 0 on PRU1
+[   10.499428] virtio_rpmsg_bus virtio0: rpmsg host is online
+[   10.499675]  remoteproc2: mbox msg: 0x0
+[   10.499712] virtio_rpmsg_bus virtio0: creating channel rpmsg-pru addr 0x1f
+[   10.499941]  remoteproc2: kicking vqid 0 on PRU1
+[   10.695860] rpmsg_pru rpmsg0: new rpmsg_pru device: /dev/rpmsg_pru31
+[   10.720312] cfg80211: Calling CRDA to update world regulatory domain
+[   10.957086] cfg80211: World regulatory domain updated:
+[   10.957117] cfg80211:  DFS Master region: unset
+[   10.957174] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp), (dfs_cac_time)
+[   10.957195] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
+[   10.957209] cfg80211:   (2457000 KHz - 2482000 KHz @ 20000 KHz), (N/A, 2000 mBm), (N/A)
+[   10.957223] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (N/A, 2000 mBm), (N/A)
+[   10.957236] cfg80211:   (5170000 KHz - 5250000 KHz @ 160000 KHz), (N/A, 2000 mBm), (N/A)
+[   10.957250] cfg80211:   (5250000 KHz - 5330000 KHz @ 80000 KHz), (N/A, 2000 mBm), (0 s)
+[   10.957263] cfg80211:   (5490000 KHz - 5730000 KHz @ 160000 KHz), (N/A, 2000 mBm), (0 s)
+[   10.957277] cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (N/A, 2000 mBm), (N/A)
+[   10.957290] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm), (N/A)
+[   10.973715] wlcore: Time Sync: gpio requested
+[   10.976302] wl18xx_driver wl18xx.1.auto: Direct firmware load failed with error -2
+[   10.976323] wl18xx_driver wl18xx.1.auto: Falling back to user helper
+[   11.416346] wlcore: wl18xx HW: 183x or 180x, PG 2.2 (ROM 0x11)
+[   11.430375] wlcore: loaded
+[   11.430450] wlcore: driver version: R8.6-dirty
+[   11.430461] wlcore: compilation time: Mon Mar 12 14:31:05 2018
+[   13.570216] using random self ethernet address
+[   13.570255] using random host ethernet address
+[   13.571142] usb0: HOST MAC f2:0b:e5:f8:a0:1c
+[   13.571209] usb0: MAC 62:b2:91:35:e2:f2
+[   13.571279] using random self ethernet address
+[   13.571297] using random host ethernet address
+[   13.610399] g_ether gadget: Ethernet Gadget, version: Memorial Day 2008
+[   13.610434] g_ether gadget: g_ether ready
+[   13.610459] musb-hdrc musb-hdrc.0.auto: otg: usb_otg_register_gadget: device not registered to otg core
+[   14.102069] musb-hdrc musb-hdrc.0.auto: otg: usb_otg_kick_fsm: invalid host/gadget device
+[   14.222028] usb 1-1: new high-speed USB device number 2 using musb-hdrc
+[   14.362425] usb 1-1: device v0781 p5406 is not supported
+[   14.368072] usb 1-1: New USB device found, idVendor=0781, idProduct=5406
+[   14.368089] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   14.368104] usb 1-1: Product: U3 Cruzer Micro
+[   14.368118] usb 1-1: Manufacturer: SanDisk
+[   14.368131] usb 1-1: SerialNumber: 016463163E52A65B
+[   14.371320] usb-storage 1-1:1.0: USB Mass Storage device detected
+[   14.382783] scsi0 : usb-storage 1-1:1.0
+[   14.461910] wlcore: using inverted interrupt logic: 2
+[   14.519293] wlcore: PHY firmware version: Rev 8.2.0.0.242
+[   14.645137] wlcore: firmware booted (Rev 8.9.0.0.79)
+[   14.645451] wlcore: WARNING Intercepted sleep auth 2
+[   15.382832] scsi 0:0:0:0: Direct-Access     SanDisk  U3 Cruzer Micro  8.02 PQ: 0 ANSI: 0 CCS
+[   15.387124] sd 0:0:0:0: [sda] 7856127 512-byte logical blocks: (4.02 GB/3.74 GiB)
+[   15.390436] sd 0:0:0:0: [sda] Write Protect is off
+[   15.390477] sd 0:0:0:0: [sda] Mode Sense: 45 00 00 08
+[   15.390770] sd 0:0:0:0: [sda] No Caching mode page found
+[   15.396496] sd 0:0:0:0: [sda] Assuming drive cache: write through
+[   15.542337] sd 0:0:0:0: [sda] No Caching mode page found
+[   15.548013] sd 0:0:0:0: [sda] Assuming drive cache: write through
+[   15.617529]  sda: sda1
+[   15.631119] sd 0:0:0:0: [sda] No Caching mode page found
+[   15.636849] sd 0:0:0:0: [sda] Assuming drive cache: write through
+[   15.643320] sd 0:0:0:0: [sda] Attached SCSI removable disk
+[   18.805141] random: nonblocking pool is initialized
+[   23.550095] EXT2-fs (sda1): warning: mounting unchecked fs, running e2fsck is recommended
+[   24.074424] cfg80211: Calling CRDA for country: GB
+[   24.652284] cfg80211: Regulatory domain changed to country: GB
+[   24.652320] cfg80211:  DFS Master region: ETSI
+[   24.652334] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp), (dfs_cac_time)
+[   24.652353] cfg80211:   (2402000 KHz - 2482000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
+[   24.652368] cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz), (N/A, 2000 mBm), (N/A)
+[   24.652382] cfg80211:   (5250000 KHz - 5330000 KHz @ 80000 KHz), (N/A, 2000 mBm), (0 s)
+[   24.652396] cfg80211:   (5490000 KHz - 5710000 KHz @ 80000 KHz), (N/A, 2700 mBm), (0 s)
+[   24.652410] cfg80211:   (57240000 KHz - 65880000 KHz @ 2160000 KHz), (N/A, 4000 mBm), (N/A)
+[   25.362362]  remoteproc2: kicking vqid 1 on PRU1
+[   25.364503]  remoteproc2: mbox msg: 0x0
+[   25.364559]  remoteproc2: kicking vqid 0 on PRU1
+[   25.365064]  remoteproc2: kicking vqid 1 on PRU1
+[   25.372678]  remoteproc2: mbox msg: 0x0
+[   25.372734]  remoteproc2: kicking vqid 0 on PRU1
+[   25.373052]  remoteproc2: kicking vqid 1 on PRU1
+[   25.380768]  remoteproc2: mbox msg: 0x0
+[   25.380828]  remoteproc2: kicking vqid 0 on PRU1
+[   25.381111]  remoteproc2: kicking vqid 1 on PRU1
+[   25.388518]  remoteproc2: mbox msg: 0x0
+[   25.388583]  remoteproc2: kicking vqid 0 on PRU1
+[   25.388917]  remoteproc2: kicking vqid 1 on PRU1
+[   25.396513]  remoteproc2: mbox msg: 0x0
+[   25.396578]  remoteproc2: kicking vqid 0 on PRU1
+[   25.397233]  remoteproc2: kicking vqid 1 on PRU1
+[   25.404999]  remoteproc2: mbox msg: 0x0
+[   25.405059]  remoteproc2: kicking vqid 0 on PRU1
+[   25.405365]  remoteproc2: kicking vqid 1 on PRU1
+[   25.412844]  remoteproc2: mbox msg: 0x0
+[   25.412901]  remoteproc2: kicking vqid 0 on PRU1
+[   25.413390]  remoteproc2: kicking vqid 1 on PRU1
+[   25.420909]  remoteproc2: mbox msg: 0x0
+[   25.420968]  remoteproc2: kicking vqid 0 on PRU1
+[   29.306606] wlcore: down
+[   32.890308] wlan0: authenticate with c4:41:...
+[   32.894098] wlan0: send auth to c4:41:... (try 1/3)
+[   32.960416] wlan0: authenticated
+[   32.972067] wlan0: associate with c4:41:... (try 1/3)
+[   32.975630] wlan0: RX AssocResp from c4:41:... (capab=0x111 status=0 aid=3)
+[   32.982613] wlan0: associated
+[   32.984779] cfg80211: Calling CRDA for country: DE
+[   33.027850] wlan0: Limiting TX power to 20 (23 - 3) dBm as advertised by c4:41:...
+[   33.097816] cfg80211: Regulatory domain changed to country: DE
+[   33.097855] cfg80211:  DFS Master region: ETSI
+[   33.097867] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp), (dfs_cac_time)
+[   33.097886] cfg80211:   (2400000 KHz - 2483500 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
+[   33.097900] cfg80211:   (5150000 KHz - 5250000 KHz @ 80000 KHz), (N/A, 2000 mBm), (N/A)
+[   33.097915] cfg80211:   (5250000 KHz - 5350000 KHz @ 80000 KHz), (N/A, 2000 mBm), (0 s)
+[   33.097928] cfg80211:   (5470000 KHz - 5725000 KHz @ 80000 KHz), (N/A, 2698 mBm), (0 s)
+[   33.097942] cfg80211:   (57240000 KHz - 65880000 KHz @ 2160000 KHz), (N/A, 4000 mBm), (N/A)
+[   33.112337] wlcore: Association completed.
+[   34.298016] wlan0: deauthenticating from c4:41:... by local choice (Reason: 3=DEAUTH_LEAVING)
+[   34.361074] cfg80211: Calling CRDA to update world regulatory domain
+[   34.387408] wlan0: authenticate with c4:41:...
+[   34.393096] wlan0: send auth to c4:41:... (try 1/3)
+[   34.572189] cfg80211: World regulatory domain updated:
+[   34.572231] cfg80211:  DFS Master region: unset
+[   34.572244] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp), (dfs_cac_time)
+[   34.572264] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
+[   34.572279] cfg80211:   (2457000 KHz - 2482000 KHz @ 20000 KHz), (N/A, 2000 mBm), (N/A)
+[   34.572293] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (N/A, 2000 mBm), (N/A)
+[   34.572306] cfg80211:   (5170000 KHz - 5250000 KHz @ 160000 KHz), (N/A, 2000 mBm), (N/A)
+[   34.572321] cfg80211:   (5250000 KHz - 5330000 KHz @ 80000 KHz), (N/A, 2000 mBm), (0 s)
+[   34.572335] cfg80211:   (5490000 KHz - 5730000 KHz @ 160000 KHz), (N/A, 2000 mBm), (0 s)
+[   34.572348] cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (N/A, 2000 mBm), (N/A)
+[   34.572362] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm), (N/A)
+[   34.572625] cfg80211: Calling CRDA for country: GB
+[   34.576606] wlan0: authenticated
+[   34.592143] wlan0: associate with c4:41:... (try 1/3)
+[   34.595824] wlan0: RX AssocResp from c4:41:... (capab=0x111 status=0 aid=3)
+[   34.602799] wlan0: associated
+[   34.642278] wlcore: Association completed.
+[   34.666363] wlan0: Limiting TX power to 20 (23 - 3) dBm as advertised by c4:41:...
+[   34.808302] cfg80211: Regulatory domain changed to country: GB
+[   34.808341] cfg80211:  DFS Master region: ETSI
+[   34.808354] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp), (dfs_cac_time)
+[   34.808373] cfg80211:   (2402000 KHz - 2482000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
+[   34.808387] cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz), (N/A, 2000 mBm), (N/A)
+[   34.808402] cfg80211:   (5250000 KHz - 5330000 KHz @ 80000 KHz), (N/A, 2000 mBm), (0 s)
+[   34.808416] cfg80211:   (5490000 KHz - 5710000 KHz @ 80000 KHz), (N/A, 2700 mBm), (0 s)
+[   34.808430] cfg80211:   (57240000 KHz - 65880000 KHz @ 2160000 KHz), (N/A, 4000 mBm), (N/A)
+[   34.808704] cfg80211: Calling CRDA for country: DE
+[   34.849196] cfg80211: Regulatory domain changed to country: DE
+[   34.849234] cfg80211:  DFS Master region: ETSI
+[   34.849246] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp), (dfs_cac_time)
+[   34.849266] cfg80211:   (2400000 KHz - 2483500 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
+[   34.849280] cfg80211:   (5150000 KHz - 5250000 KHz @ 80000 KHz), (N/A, 2000 mBm), (N/A)
+[   34.849295] cfg80211:   (5250000 KHz - 5350000 KHz @ 80000 KHz), (N/A, 2000 mBm), (0 s)
+[   34.849308] cfg80211:   (5470000 KHz - 5725000 KHz @ 80000 KHz), (N/A, 2698 mBm), (0 s)
+[   34.849322] cfg80211:   (57240000 KHz - 65880000 KHz @ 2160000 KHz), (N/A, 4000 mBm), (N/A)
+[   37.319075]  remoteproc2: kicking vqid 1 on PRU1
+[   37.321454]  remoteproc2: mbox msg: 0x0
+[   37.321514]  remoteproc2: kicking vqid 0 on PRU1
+[   37.321818]  remoteproc2: kicking vqid 1 on PRU1
+[   37.329991]  remoteproc2: mbox msg: 0x0
+[   37.330062]  remoteproc2: kicking vqid 0 on PRU1
+[   37.330414]  remoteproc2: kicking vqid 1 on PRU1
+[   37.338049]  remoteproc2: mbox msg: 0x0
+[   37.338118]  remoteproc2: kicking vqid 0 on PRU1
+[   37.338472]  remoteproc2: kicking vqid 1 on PRU1
