@@ -1,4 +1,4 @@
-# System analysis
+# System analysis for SoundTouch 10 (ST10)
 
 ```
 root@rhino:~# uname -a
