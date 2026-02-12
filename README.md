@@ -24,4 +24,4 @@ docker exec -it bose-builder /bin/bash
 # > root@e3e4e3789b4d:/# cd /root/ && ls
 # > build.sh  libssl_spy.so  ssl_spy.c
 ```
-Using that container, the `scripts/deploy.sh` scripts allows for convenient cross-compiling and deployment of the code in this repo to a real device.
+Using that container, the `scripts/deploy.sh` script allows for convenient cross-compiling and deployment of the code in this repo to a real device.
