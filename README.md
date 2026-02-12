@@ -8,3 +8,20 @@ Conceptually, the docker container image (provided in `assets/`) in this repo pr
 Eventually, all this should be integrated into the [SoundCork project](https://github.com/deborahgu/soundcork).
 
 Preliminary analysis results can be found in `docs/`.
+
+# Build environment for cross-compilation
+You can get a cross compilation environment with:
+```shell
+cd $YOUR_GIT_ROOT/scripts/utils
+./reassemble-docker-image.sh
+# > Archive docker-bose-build-env-image.tar OK
+# (ensure that docker daemon is running in the background, e.g., via open -a Docker)
+docker load -i docker-bose-build-env-image.tar
+# > Loaded image: bose-build-env:wheezy
+docker run -d -it --platform linux/arm/v7 --name bose-builder bose-build-env:wheezy bash
+# > e3e4e3789b4d8724ad4bde4ade3a0991b045f0e8f361aa18aa66dc683494410b
+docker exec -it bose-builder /bin/bash
+# > root@e3e4e3789b4d:/# cd /root/ && ls
+# > build.sh  libssl_spy.so  ssl_spy.c
+```
+Using that container, the `scripts/deploy.sh` scripts allows for convenient cross-compiling and deployment of the code in this repo to a real device.
