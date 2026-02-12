@@ -29,7 +29,7 @@ def bose_auth():
     res.headers['X-Forwarded-Proto'] = 'https'
     res.headers['User-Agent'] = 'Bose_Lisa/27.0.6'
     res.headers['Accept'] = '*/*'
-    res.headers['apikeyheader'] = request.headers.get('apikeyheader', 'Ml7YGAI9JWjFhU7D348e86JPXtisddBa')
+    res.headers['apikeyheader'] = request.headers.get('apikeyheader', 'your-fallback-key')
     return res
 
 # --- ENDPOINT: iHeart Country Check (typically HTTP) ---
