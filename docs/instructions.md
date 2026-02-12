@@ -37,4 +37,6 @@ scp libbose_hook.so root@{YOUR_SOUNDTOUCH_DEVICE}:/tmp/libbose_hook.so
 ```
 
 # Enabling permanent ssh+telnet access:
-Simply change `true` to `false` in `/usr/bin/is-production`. Before doing so, use `rw` to enable write-access. Then `reboot`.
+~Simply change `true` to `false` in `/usr/bin/is-production`. Before doing so, use `rw` to enable write-access. Then `reboot`.~
+
+Simply do `touch /mnt/nv/remote_services` once.
